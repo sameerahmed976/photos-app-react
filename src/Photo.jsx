@@ -16,8 +16,8 @@ const Photo = ({
         <img src={regular} alt={alt_description} className="image" />
         <div className="card__content">
           <div className="heading">
-            <h2>{name}</h2>
-            <p>{likes}</p>
+            <h2 className="card__title">{name}</h2>
+            <p className="card__likes">{likes} Likes</p>
           </div>
           <a href={portfolio_url}>
             <img
