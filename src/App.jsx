@@ -116,7 +116,11 @@ function App() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <button type="submit" onClick={handleSubmit}>
+          <button
+            type="submit"
+            className="btn btn--submit"
+            onClick={handleSubmit}
+          >
             <FaSearch />
           </button>
         </form>

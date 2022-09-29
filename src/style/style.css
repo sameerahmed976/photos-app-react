@@ -60,3 +60,59 @@ img {
 }
 
 /* mobile */
+
+.form__container {
+  background-color: white;
+  width: 100%;
+  height: 8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.form {
+  display: flex;
+  gap: 0.1rem;
+  position: relative;
+}
+
+#search {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.2rem;
+  border-color: transparent;
+  font-size: 1.3rem;
+  background-color: whitesmoke;
+  border-bottom: 3px solid orange;
+  transition: var(--transition-8);
+}
+
+#search::placeholder {
+  letter-spacing: 1px;
+  color: gray;
+  font-weight: bold;
+  transition: var(--transition-8);
+}
+
+#search:focus {
+  outline: none;
+  border: 2px solid orange;
+}
+
+.btn {
+  font-size: 1.5rem;
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  display: block;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: peru;
+  cursor: pointer;
+  transition: var(--transition-8);
+}
+
+.btn--submit:hover {
+  transform: scale(1.2);
+}
