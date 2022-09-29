@@ -10,7 +10,6 @@ const searchURL = `https://api.unsplash.com/search/photos/`;
 const clientId = `?client_id=${import.meta.env.VITE_KEY}`;
 
 function App() {
-  const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
   const [photos, setPhotos] = useState([]);
   const [page, setPage] = useState(1);
@@ -40,10 +39,11 @@ function App() {
         // return [...old, ...dataFetch];
 
         if (query && page === 1) {
-          return data.results;
+          return dataFetch.results;
         } else if (query) {
           // console.log("click");
-          console.log([...old, ...dataFetch.results]);
+          // console.log([...old, ...dataFetch.results]);
+
           return [...old, ...dataFetch.results];
         } else {
           return [...old, ...dataFetch];
@@ -95,7 +95,6 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!query) {
       return;
     }
@@ -123,7 +122,7 @@ function App() {
         </form>
       </section>
       <section className="photos__container">
-        {photos?.map((item, index) => {
+        {photos.map((item, index) => {
           return <Photo key={index} {...item} />;
         })}
 
